@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - QuickRecharge.in</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background-color: #ffffff; border-bottom: 1px solid #e2e8f0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #1d4ed8; text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
+        .nav-links a { text-decoration: none; color: #64748b; font-weight: 500; }
+        .nav-links a.active { color: #1d4ed8; }
+        
+        .dashboard-layout { max-width: 1200px; margin: 2rem auto; width: 100%; padding: 0 2rem; display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
+        @media (max-width: 768px) { .dashboard-layout { grid-template-columns: 1fr; } }
+        
+        .welcome-card { background: #ffffff; padding: 2rem; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; grid-column: 1 / -1; }
+        .wallet-bal { text-align: right; }
+        .wallet-bal h3 { font-size: 1.75rem; color: #10b981; }
+        
+        .card { background: #ffffff; padding: 2rem; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 1.5rem; }
+        .card h2 { font-size: 1.25rem; margin-bottom: 1.5rem; color: #0f172a; border-bottom: 2px solid #eff6ff; padding-bottom: 0.5rem; }
+        
+        .shortcut-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .shortcut-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem; border: 1px solid #cbd5e1; border-radius: 6px; text-decoration: none; color: #334155; font-weight: 500; transition: all 0.2s; background: #fff; }
+        .shortcut-btn:hover { border-color: #1d4ed8; background: #eff6ff; color: #1d4ed8; }
+        
+        .txn-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; }
+        .txn-item:last-child { border-bottom: none; }
+        .status-badge { padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+        .status-success { background: #d1fae5; color: #065f46; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">QuickRecharge.in</a>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="mobile-recharge.html">Recharge</a></li>
+                <li><a href="bill-payment.html">Bills</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="index.html" style="color:#ef4444;">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-layout">
+        <div class="welcome-card">
+            <div>
+                <h1>Welcome Back, Jatin Joshi!</h1>
+                <p style="color: #64748b;">Account Reference ID: #UR-1025</p>
+            </div>
+            <div class="wallet-bal">
+                <p style="color: #64748b; font-size: 0.875rem; font-weight: 500;">Wallet Balance</p>
+                <h3>Rs. 500.00</h3>
+            </div>
+        </div>
+
+        <div class="left-col">
+            <div class="card">
+                <h2>Quick Action Console</h2>
+                <div class="shortcut-grid">
+                    <a href="mobile-recharge.html" class="shortcut-btn"><span>Mobile Prepaid</span></a>
+                    <a href="plans.html" class="shortcut-btn"><span>Browse Plans</span></a>
+                    <a href="bill-payment.html" class="shortcut-btn"><span>Utility Bills</span></a>
+                    <a href="history.html" class="shortcut-btn"><span>Receipt Center</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-col">
+            <div class="card">
+                <h2>Recent Transactions</h2>
+                <div class="txn-item">
+                    <div>
+                        <p style="font-weight: 600;">Jio Mobile</p>
+                        <p style="font-size: 0.75rem; color:#64748b;">15-Mar-2026</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p style="font-weight: 600;">Rs. 299.00</p>
+                        <span class="status-badge status-success">SUCCESS</span>
+                    </div>
+                </div>
+                <div class="txn-item">
+                    <div>
+                        <p style="font-weight: 600;">Airtel Mobile</p>
+                        <p style="font-size: 0.75rem; color:#64748b;">10-Mar-2026</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p style="font-weight: 600;">Rs. 99.00</p>
+                        <span class="status-badge status-success">SUCCESS</span>
+                    </div>
+                </div>
+                <a href="history.html" style="display: block; text-align: center; margin-top: 1rem; font-size: 0.875rem; color: #1d4ed8; text-decoration: none; font-weight: 500;">View All Transactions</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

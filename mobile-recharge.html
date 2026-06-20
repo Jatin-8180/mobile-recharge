@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Recharge - QuickRecharge.in</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background-color: #ffffff; border-bottom: 1px solid #e2e8f0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #1d4ed8; text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
+        .nav-links a { text-decoration: none; color: #64748b; font-weight: 500; }
+        
+        main { max-width: 900px; margin: 2rem auto; width: 100%; padding: 0 2rem; }
+        .card { background: #ffffff; padding: 2rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        h1 { font-size: 1.5rem; margin-bottom: 1.5rem; color: #0f172a; }
+        
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.875rem; color: #334155; }
+        .form-control { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 1rem; }
+        .form-control:focus { border-color: #1d4ed8; outline: none; }
+        
+        .radio-group { display: flex; gap: 1.5rem; padding: 0.5rem 0; }
+        .radio-label { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500; }
+        
+        .plan-selector-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+        .plan-selector-table th, .plan-selector-table td { padding: 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        .plan-selector-table th { background: #f8fafc; font-weight: 600; color: #475569; }
+        .plan-selector-table tr:hover { background: #f1f5f9; }
+        
+        .btn-primary { background-color: #1d4ed8; color: #ffffff; padding: 0.75rem 2rem; border-radius: 4px; font-weight: 500; border: none; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
+        .btn-primary:hover { background-color: #1e40af; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">QuickRecharge.in</a>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="mobile-recharge.html" style="color: #1d4ed8;">Recharge</a></li>
+                <li><a href="bill-payment.html">Bills</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <h1>Prepaid Mobile Recharge</h1>
+            <form action="payment.html" method="GET">
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" class="form-control" value="9876543210" required pattern="[0-9]{10}">
+                </div>
+                
+                <div class="form-group">
+                    <label>Telecom Operator</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="operator" checked> Jio</label>
+                        <label class="radio-label"><input type="radio" name="operator"> Airtel</label>
+                        <label class="radio-label"><input type="radio" name="operator"> Vi</label>
+                        <label class="radio-label"><input type="radio" name="operator"> BSNL</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Circle / State Area</label>
+                    <select class="form-control">
+                        <option>Madhya Pradesh & Chhattisgarh</option>
+                        <option selected>Maharashtra & Goa</option>
+                        <option>Delhi NCR</option>
+                        <option>Karnataka</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Recharge Plan</label>
+                    <table class="plan-selector-table">
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Price</th>
+                                <th>Validity</th>
+                                <th>Data Pack</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="radio" name="selected_plan" value="299" checked></td>
+                                <td><strong>Rs. 299</strong></td>
+                                <td>28 Days</td>
+                                <td>2 GB / Day</td>
+                                <td>Unlimited Calls + 100 SMS/day</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="selected_plan" value="399"></td>
+                                <td><strong>Rs. 399</strong></td>
+                                <td>56 Days</td>
+                                <td>1.5 GB / Day</td>
+                                <td>Unlimited Calls + 100 SMS/day</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="selected_plan" value="599"></td>
+                                <td><strong>Rs. 599</strong></td>
+                                <td>84 Days</td>
+                                <td>2 GB / Day</td>
+                                <td>Truly Unlimited Local/STD Calling packs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="text-align: right; margin-top: 2rem;">
+                    <button type="submit" class="btn-primary">Proceed to Checkout</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

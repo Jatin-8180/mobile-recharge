@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge Plans - QuickRecharge.in</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background-color: #ffffff; border-bottom: 1px solid #e2e8f0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #1d4ed8; text-decoration: none; }
+        
+        main { max-width: 1000px; margin: 2rem auto; width: 100%; padding: 0 2rem; }
+        .operator-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+        
+        .tabs { display: flex; gap: 0.5rem; border-bottom: 2px solid #e2e8f0; margin-bottom: 1.5rem; }
+        .tab-item { padding: 0.75rem 1.5rem; cursor: pointer; font-weight: 500; color: #64748b; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+        .tab-item.active { color: #1d4ed8; border-bottom-color: #1d4ed8; }
+        
+        .plans-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+        .plan-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+        .plan-price { font-size: 1.75rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .plan-meta { display: flex; justify-content: space-between; color: #475569; font-size: 0.875rem; margin-bottom: 1rem; background: #f8fafc; padding: 0.5rem; border-radius: 4px; }
+        .plan-desc { font-size: 0.875rem; color: #64748b; margin-bottom: 1.5rem; line-height: 1.4; }
+        
+        .btn-select { background: #eff6ff; color: #1d4ed8; padding: 0.5rem; text-align: center; font-weight: 500; text-decoration: none; border-radius: 4px; transition: all 0.2s; }
+        .btn-select:hover { background: #1d4ed8; color: #fff; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">QuickRecharge.in</a>
+            <div class="nav-links"><a href="dashboard.html" style="text-decoration:none; color:#64748b; font-weight:500;">Back to Dashboard</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="operator-header">
+            <div>
+                <h1>Jio National Prepaid Plans</h1>
+                <p style="color: #64748b;">Circle Location Area: Maharashtra & Goa</p>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab-item active">Popular Packs</div>
+            <div class="tab-item">Unlimited Plans</div>
+            <div class="tab-item">Data Vouchers</div>
+            <div class="tab-item">Annual Packs</div>
+        </div>
+
+        <div class="plans-grid">
+            <div class="plan-card">
+                <div>
+                    <div class="plan-price">Rs. 299</div>
+                    <div class="plan-meta">
+                        <span><strong>28 Days</strong> Validity</span>
+                        <span><strong>2 GB / Day</strong> Data</span>
+                    </div>
+                    <p class="plan-desc">Truly unlimited local and STD calls to any network in India with 100 high speed outbox SMS message allowance per operational cycle.</p>
+                </div>
+                <a href="mobile-recharge.html" class="btn-select">Select Plan</a>
+            </div>
+
+            <div class="plan-card">
+                <div>
+                    <div class="plan-price">Rs. 399</div>
+                    <div class="plan-meta">
+                        <span><strong>56 Days</strong> Validity</span>
+                        <span><strong>1.5 GB / Day</strong> Data</span>
+                    </div>
+                    <p class="plan-desc">Extended value pack incorporating absolute calls connectivity across national switches with standardized high-speed parameters.</p>
+                </div>
+                <a href="mobile-recharge.html" class="btn-select">Select Plan</a>
+            </div>
+
+            <div class="plan-card">
+                <div>
+                    <div class="plan-price">Rs. 199</div>
+                    <div class="plan-meta">
+                        <span><strong>28 Days</strong> Validity</span>
+                        <span><strong>1.5 GB / Day</strong> Data</span>
+                    </div>
+                    <p class="plan-desc">Budget functional tier offering essential voice operations data matrix routing for low baseline consumers.</p>
+                </div>
+                <a href="mobile-recharge.html" class="btn-select">Select Plan</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

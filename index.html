@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRecharge.in - Home</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background-color: #ffffff; border-bottom: 1px solid #e2e8f0; sticky position: top; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #1d4ed8; text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
+        .nav-links a { text-decoration: none; color: #64748b; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #1d4ed8; }
+        .btn { padding: 0.5rem 1.25rem; border-radius: 4px; font-weight: 500; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s; }
+        .btn-outline { border: 1px solid #1d4ed8; color: #1d4ed8; background: transparent; }
+        .btn-outline:hover { background: #eff6ff; }
+        .btn-primary { background-color: #1d4ed8; color: #ffffff; }
+        .btn-primary:hover { background-color: #1e40af; }
+        
+        main { flex: 1; max-width: 1200px; margin: 0 auto; width: 100%; padding: 2rem; }
+        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; padding: 3rem 0; }
+        @media (max-width: 768px) { .hero { grid-template-columns: 1fr; gap: 2rem; padding: 1rem 0; } .nav-links { display: none; } }
+        
+        .hero-text h1 { font-size: 2.75rem; color: #0f172a; line-height: 1.2; margin-bottom: 1rem; }
+        .hero-text p { font-size: 1.125rem; color: #64748b; margin-bottom: 2rem; }
+        
+        .recharge-card { background: #ffffff; padding: 2.5rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.875rem; color: #334155; }
+        .form-control { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 1rem; outline: none; }
+        .form-control:focus { border-color: #1d4ed8; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 4rem; }
+        .service-box { background: #ffffff; padding: 2rem; border-radius: 6px; border: 1px solid #e2e8f0; text-align: center; }
+        .service-box h3 { margin-bottom: 0.5rem; color: #0f172a; }
+        .service-box p { color: #64748b; font-size: 0.875rem; }
+        
+        footer { background: #ffffff; border-top: 1px solid #e2e8f0; padding: 2rem; text-align: center; color: #94a3b8; font-size: 0.875rem; margin-top: auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">QuickRecharge.in</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plans.html">Plans</a></li>
+                <li><a href="bill-payment.html">Bills</a></li>
+                <li><a href="login.html" class="btn btn-outline">Login</a></li>
+                <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Recharge Smarter, Faster, Anytime!</h1>
+                <p>Instant mobile recharges, DTH renewals, and electricity bill payments secure on India's premier transaction portal.</p>
+                <div style="background: #eff6ff; border-left: 4px solid #1d4ed8; padding: 1rem; border-radius: 0 4px 4px 0;">
+                    <strong style="color: #1e40af;">Special Offer:</strong> Jio Unlimited Pack Rs. 299 for 28 Days!
+                </div>
+            </div>
+            <div class="recharge-card">
+                <form action="mobile-recharge.html" method="GET">
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" class="form-control" placeholder="Enter 10-digit mobile number" required pattern="[0-9]{10}">
+                    </div>
+                    <div class="form-group">
+                        <label>Operator</label>
+                        <select class="form-control" required>
+                            <option value="">Select Operator</option>
+                            <option>Jio</option>
+                            <option>Airtel</option>
+                            <option>Vi</option>
+                            <option>BSNL</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;">Proceed to Recharge</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="services-grid">
+            <div class="service-box">
+                <h3>Mobile Prepaid</h3>
+                <p>Instant prepay connections across all top national operators.</p>
+            </div>
+            <div class="service-box">
+                <h3>DTH Connection</h3>
+                <p>Flexible plan extensions for Tata Play, DishTV, Airtel Digital, and Sun Direct.</p>
+            </div>
+            <div class="service-box">
+                <h3>Utility Bills</h3>
+                <p>Pay electricity, water, pipeline gas, and broadband instantly online.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 QuickRecharge.in. Secure PCI-DSS Certified Environment.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin System Console - QuickRecharge</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f1f5f9; color: #1e293b; display: flex; }
+        
+        .sidebar { width: 260px; background: #0f172a; color: #fff; min-height: 100vh; padding: 2rem 1rem; }
+        .sidebar h2 { font-size: 1.25rem; color: #38bdf8; margin-bottom: 2rem; padding-left: 0.5rem; }
+        .sidebar a { display: block; padding: 0.75rem 1rem; color: #94a3b8; text-decoration: none; border-radius: 4px; margin-bottom: 0.25rem; font-weight: 500; }
+        .sidebar a:hover, .sidebar a.active { background: #1e293b; color: #fff; }
+        
+        .content { flex: 1; padding: 2.5rem; }
+        .header-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
+        @media (max-width: 1024px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+        .stat-card { background: #ffffff; padding: 1.5rem; border-radius: 6px; border: 1px solid #e2e8f0; }
+        .stat-card p { font-size: 0.85rem; text-transform: uppercase; color: #64748b; font-weight: 600; margin-bottom: 0.5rem; }
+        .stat-card h3 { font-size: 1.75rem; color: #0f172a; }
+        
+        .analytics-block { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
+        @media (max-width: 768px) { .analytics-block { grid-template-columns: 1fr; } }
+        .panel { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.5rem; }
+        .panel h4 { font-size: 1.1rem; margin-bottom: 1rem; color: #334155; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem; }
+        
+        .flat-bar-chart { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
+        .bar-row { display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; }
+        .bar-label { width: 40px; font-weight: 500; }
+        .bar-track { flex: 1; background: #e2e8f0; height: 16px; border-radius: 4px; overflow: hidden; }
+        .bar-fill { background: #1d4ed8; height: 100%; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>QuickRecharge Admin</h2>
+        <a href="admin-dashboard.html" class="active">Operations Console</a>
+        <a href="plan-management.html">Plan Management</a>
+        <a href="#" onclick="alert('User control records simulation access state.');">User Registry</a>
+        <a href="index.html" style="color:#f87171; margin-top:4rem;">System Exit</a>
+    </div>
+
+    <div class="content">
+        <div class="header-bar">
+            <h1>System Metrics Dashboard</h1>
+            <span style="font-weight: 500; color:#475569;">Active System Supervisor: <strong>admin@qr.in</strong></span>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card"><p>Total Platform Registries</p><h3>5,248</h3></div>
+            <div class="stat-card"><p>Transactions Processed</p><h3>18,450</h3></div>
+            <div class="stat-card"><p>Daily Active Sessions</p><h3>312</h3></div>
+            <div class="stat-card"><p>Cumulative Commission Revenue</p><h3 style="color:#10b981;">Rs. 52,000</h3></div>
+        </div>
+
+        <div class="analytics-block">
+            <div class="panel">
+                <h4>System Load Traffic (7-Day Transaction Run)</h4>
+                <div class="flat-bar-chart">
+                    <div class="bar-row"><span class="bar-label">Mon</span><div class="bar-track"><div class="bar-fill" style="width: 70%;"></div></div><span>420 tx</span></div>
+                    <div class="bar-row"><span class="bar-label">Tue</span><div class="bar-track"><div class="bar-fill" style="width: 65%;"></div></div><span>380 tx</span></div>
+                    <div class="bar-row"><span class="bar-label">Wed</span><div class="bar-track"><div class="bar-fill" style="width: 85%;"></div></div><span>510 tx</span></div>
+                    <div class="bar-row"><span class="bar-label">Thu</span><div class="bar-track"><div class="bar-fill" style="width: 80%;"></div></div><span>490 tx</span></div>
+                    <div class="bar-row"><span class="bar-label">Fri</span><div class="bar-track"><div class="bar-fill" style="width: 95%;"></div></div><span>560 tx</span></div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h4>Operator Volumes Share</h4>
+                <table style="width:100%; border-collapse:collapse; font-size:0.9rem; margin-top:1rem;">
+                    <tr style="border-bottom:1px solid #f1f5f9;"><td style="padding:0.5rem 0;">1. Jio Infocomm</td><td style="text-align:right; font-weight:600;">45%</td></tr>
+                    <tr style="border-bottom:1px solid #f1f5f9;"><td style="padding:0.5rem 0;">2. Bharti Airtel</td><td style="text-align:right; font-weight:600;">30%</td></tr>
+                    <tr style="border-bottom:1px solid #f1f5f9;"><td style="padding:0.5rem 0;">3. Vodafone Idea</td><td style="text-align:right; font-weight:600;">15%</td></tr>
+                    <tr><td style="padding:0.5rem 0;">4. BSNL Mobile</td><td style="text-align:right; font-weight:600;">10%</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

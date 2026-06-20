@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - QuickRecharge.in</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background-color: #ffffff; border-bottom: 1px solid #e2e8f0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #1d4ed8; text-decoration: none; }
+        
+        main { max-width: 1100px; margin: 2rem auto; width: 100%; padding: 0 2rem; }
+        h1 { font-size: 1.5rem; color: #0f172a; margin-bottom: 1.5rem; }
+        
+        .filter-panel { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1.25rem; margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: flex-end; }
+        .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+        .form-group label { font-size: 0.75rem; font-weight: 600; color: #64748b; text-transform: uppercase; }
+        .form-control { padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 0.9rem; }
+        .btn-filter { background: #1d4ed8; color: #fff; border: none; padding: 0.55rem 1.25rem; border-radius: 4px; cursor: pointer; font-weight: 500; font-size: 0.9rem; }
+        
+        .ledger-table { width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 6px; border: 1px solid #e2e8f0; overflow: hidden; }
+        .ledger-table th, .ledger-table td { padding: 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 0.95rem; }
+        .ledger-table th { background: #f8fafc; font-weight: 600; color: #475569; }
+        
+        .badge { padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+        .badge-success { background: #d1fae5; color: #065f46; }
+        .badge-failed { background: #fee2e2; color: #991b1b; }
+        .btn-action-link { color: #1d4ed8; text-decoration: none; font-weight: 500; }
+        .btn-action-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">QuickRecharge.in</a>
+            <div class="nav-links"><a href="dashboard.html" style="text-decoration:none; color:#64748b; font-weight:500;">Back to Dashboard</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Statement & Transaction History</h1>
+        
+        <div class="filter-panel">
+            <div class="form-group">
+                <label>From Date</label>
+                <input type="date" class="form-control" value="2026-03-01">
+            </div>
+            <div class="form-group">
+                <label>To Date</label>
+                <input type="date" class="form-control" value="2026-03-31">
+            </div>
+            <div class="form-group">
+                <label>Type Category</label>
+                <select class="form-control">
+                    <option>All Operations</option>
+                    <option>Mobile Prepaid</option>
+                    <option>Utility Bills</option>
+                </select>
+            </div>
+            <button class="btn-filter">Apply Filter Filters</button>
+        </div>
+
+        <table class="ledger-table">
+            <thead>
+                <tr>
+                    <th>Date Execution</th>
+                    <th>Action Type</th>
+                    <th>Account Destination Target</th>
+                    <th>Processed Amount</th>
+                    <th>Status Flag</th>
+                    <th>Action Item</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>15-Mar-2026</td>
+                    <td>Mobile Recharge</td>
+                    <td>9876543210 (Jio)</td>
+                    <td>Rs. 299.00</td>
+                    <td><span class="badge badge-success">SUCCESS</span></td>
+                    <td><a href="success.html" class="btn-action-link">View Receipt</a></td>
+                </tr>
+                <tr>
+                    <td>10-Mar-2026</td>
+                    <td>Mobile Recharge</td>
+                    <td>9876543210 (Airtel)</td>
+                    <td>Rs. 99.00</td>
+                    <td><span class="badge badge-success">SUCCESS</span></td>
+                    <td><a href="#" class="btn-action-link">View Receipt</a></td>
+                </tr>
+                <tr>
+                    <td>05-Mar-2026</td>
+                    <td>DTH Recharge</td>
+                    <td>DIS-12345 (Dish TV)</td>
+                    <td>Rs. 399.00</td>
+                    <td><span class="badge badge-success">SUCCESS</span></td>
+                    <td><a href="#" class="btn-action-link">View Receipt</a></td>
+                </tr>
+                <tr>
+                    <td>01-Mar-2026</td>
+                    <td>Electricity Bill</td>
+                    <td>MSEB-789 (MSEB)</td>
+                    <td>Rs. 850.00</td>
+                    <td><span class="badge badge-success">SUCCESS</span></td>
+                    <td><a href="#" class="btn-action-link">View Receipt</a></td>
+                </tr>
+                <tr>
+                    <td>25-Feb-2026</td>
+                    <td>Mobile Recharge</td>
+                    <td>9123456789 (Vi)</td>
+                    <td>Rs. 199.00</td>
+                    <td><span class="badge badge-failed">FAILED</span></td>
+                    <td><a href="#" style="color:#64748b;">N/A</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

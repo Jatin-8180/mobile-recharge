@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Successful</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 1rem; }
+        .success-box { max-width: 500px; width: 100%; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 2.5rem; text-align: center; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
+        
+        .icon-circle { width: 72px; height: 72px; background: #d1fae5; color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 1.5rem; font-weight: bold; }
+        
+        h1 { font-size: 1.75rem; color: #0f172a; margin-bottom: 0.5rem; }
+        .subtitle { color: #64748b; margin-bottom: 2rem; font-size: 0.95rem; }
+        
+        .receipt-table { width: 100%; text-align: left; border-collapse: collapse; margin-bottom: 2rem; }
+        .receipt-table td { padding: 0.75rem 0; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem; }
+        .receipt-table td:last-child { text-align: right; font-weight: 600; color: #1e293b; }
+        
+        .action-cluster { display: flex; flex-direction: column; gap: 0.75rem; }
+        .btn { padding: 0.75rem; border-radius: 4px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; text-align: center; }
+        .btn-primary { background: #1d4ed8; color: #fff; }
+        .btn-primary:hover { background: #1e40af; }
+        .btn-secondary { background: #f1f5f9; color: #475569; }
+        .btn-secondary:hover { background: #e2e8f0; }
+    </style>
+</head>
+<body>
+    <div class="success-box">
+        <div class="icon-circle">&checkmark;</div>
+        <h1>Recharge Successful!</h1>
+        <p class="subtitle">Your account line has been successfully reloaded via automated provider APIs.</p>
+        
+        <table class="receipt-table">
+            <tr><td>Transaction Reference</td><td>TXN001234567</td></tr>
+            <tr><td>Line Destination No.</td><td>9876543210</td></tr>
+            <tr><td>Network Provider</td><td>Jio Infocomm</td></tr>
+            <tr><td>Amount Processed</td><td>Rs. 299.00</td></tr>
+            <tr><td>Plan Features</td><td>2GB/Day Pack - 28 Days</td></tr>
+            <tr><td>Payment Channel</td><td>UPI (jatin@upi)</td></tr>
+        </table>
+
+        <div class="action-cluster">
+            <button class="btn btn-primary" onclick="alert('Receipt file generation simulation triggering downloading process.');">Download PDF Receipt</button>
+            <a href="dashboard.html" class="btn btn-secondary">Return to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

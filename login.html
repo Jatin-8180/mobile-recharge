@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - QuickRecharge.in</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; display: flex; flex-direction: column; min-height: 100vh; }
+        .auth-container { max-width: 420px; width: 100%; margin: auto; padding: 2.5rem; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .logo-center { text-align: center; margin-bottom: 2rem; }
+        .logo-center a { font-size: 1.75rem; font-weight: 700; color: #1d4ed8; text-decoration: none; }
+        .logo-center h2 { font-size: 1.25rem; margin-top: 0.5rem; color: #475569; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.875rem; color: #334155; }
+        .form-control { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 1rem; }
+        .form-control:focus { border-color: #1d4ed8; outline: none; }
+        .btn-primary { background-color: #1d4ed8; color: #ffffff; width: 100%; padding: 0.75rem; border-radius: 4px; font-weight: 500; border: none; cursor: pointer; font-size: 1rem; }
+        .btn-primary:hover { background-color: #1e40af; }
+        .auth-footer { text-align: center; margin-top: 1.5rem; font-size: 0.875rem; color: #64748b; }
+        .auth-footer a { color: #1d4ed8; text-decoration: none; font-weight: 500; }
+        .admin-route { display: block; text-align: center; margin-top: 1rem; font-size: 0.825rem; color: #94a3b8; text-decoration: none; }
+        .admin-route:hover { color: #475569; }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="logo-center">
+            <a href="index.html">QuickRecharge.in</a>
+            <h2>Welcome Back</h2>
+        </div>
+        <form action="dashboard.html" method="GET">
+            <div class="form-group">
+                <label>Email or Mobile Number</label>
+                <input type="text" class="form-control" placeholder="9876543210 or name@domain.com" required>
+            </div>
+            <div class="form-group">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <label style="margin-bottom: 0;">Password</label>
+                    <a href="#" style="font-size: 0.825rem; color: #1d4ed8; text-decoration: none;">Forgot Password?</a>
+                </div>
+                <input type="password" class="form-control" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn-primary">Sign In</button>
+        </form>
+        <div class="auth-footer">
+            Don't have an account? <a href="register.html">Register Here</a>
+        </div>
+        <a href="admin-dashboard.html" class="admin-route">Access Administrator Console Panel</a>
+    </div>
+</body>
+</html>
